@@ -1,0 +1,21 @@
+
+.container-fluid {
+	background: url("../../assets/poze/wallpaper.jpg");
+	background-size: cover;
+	width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container-fluid h3 {
+    margin: 0;
+    text-align: left;
+    font-style: italic;
+}
+.inner-container {
+   width: 600px;
+   position: absolute;
+   top: 40%;
+   left: 30%;
+   margin-left: -300px;
+}
