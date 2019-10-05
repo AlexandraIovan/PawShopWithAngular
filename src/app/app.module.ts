@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import {CatsService} from './cats.service';
 
 import {CatsListComponent} from './cats-list/cats-list.component';
-import {CatsListDetailComponent} from './cats-list/catslist-detail.component';
+import {CatsListDetailComponent} from './catslist-detail/catslist-detail.component';
 import {CatsListService} from './cats-list.service';
 
 
@@ -18,7 +18,6 @@ import {CatsListService} from './cats-list.service';
   declarations: [
     AppComponent,
     rountingComponents,
-    CatsService,
     CatsListComponent,
     CatsListDetailComponent
   ],
@@ -26,8 +25,7 @@ import {CatsListService} from './cats-list.service';
     BrowserModule,
     AppRoutingModule
   ],
-  //providers: [CatsService],
-  providers: [CatsListService],
+  providers: [CatsService, CatsListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

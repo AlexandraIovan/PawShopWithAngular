@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CatsService {
 
   constructor() { }
 
   getCats(){
-    return[
-      {}
-    ]
+    return [];
   }
 }

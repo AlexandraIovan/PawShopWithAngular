@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CatsListService} from '../cats-list.service';
 @Component({
   selector: 'app-cats-list',
   template: `
   <h1> List of the cats for sale</h1>
-  <ul *ngFor="let cats-list of Kittens">
+  <ul *ngFor="let cat of Kittens">
     <li>{{cat.name}}</li>
   </ul>
   `,
@@ -18,7 +18,7 @@ export class CatsListComponent implements OnInit {
   constructor(private _CatsListService: CatsListService) { }
 
   ngOnInit() {
-    this.Kittens = this._CatsListService.getKittens()
+    this.Kittens = this._CatsListService.getKittens();
   }
 
 }
