@@ -10,6 +10,7 @@ import {CatsService} from './cats.service';
 import {CatsListComponent} from './cats-list/cats-list.component';
 import {CatsListDetailComponent} from './catslist-detail/catslist-detail.component';
 import {CatsListService} from './cats-list.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -23,7 +24,8 @@ import {CatsListService} from './cats-list.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [CatsService, CatsListService],
   bootstrap: [AppComponent]

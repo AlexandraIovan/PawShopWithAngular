@@ -19,7 +19,7 @@ export class CatsListDetailComponent implements OnInit {
 
     ngOnInit(){
 
-      this.Kittens = this._catsListService.getKittens();
+      this.Kittens = [] //this._catsListService.getKittens();
 
     }
 }
