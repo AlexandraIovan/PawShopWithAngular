@@ -11,6 +11,10 @@ import {CatsListComponent} from './cats-list/cats-list.component';
 import {CatsListDetailComponent} from './catslist-detail/catslist-detail.component';
 import {CatsListService} from './cats-list.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AdoptionComponent } from './adoption/adoption.component';
+import { ProductsComponent } from './products/products.component';
+import {AdoptionService} from './adoption.service';
+import {ProductsService} from './products.service';
 
 
 
@@ -20,14 +24,16 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     rountingComponents,
     CatsListComponent,
-    CatsListDetailComponent
+    CatsListDetailComponent,
+    AdoptionComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CatsService, CatsListService],
+  providers: [CatsService, CatsListService, AdoptionService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
