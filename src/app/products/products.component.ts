@@ -3,12 +3,8 @@ import { ProductsService} from '../products.service';
 
 @Component({
   selector: 'app-products',
-  template:`
-  <ul *ngFor="let things of stuffForCats">
-  <li>{{things.name}} - {{things.description}}</li>
-  </ul>
-  `,
-  styles:[]
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
 

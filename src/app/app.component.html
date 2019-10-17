@@ -1,12 +1,10 @@
 
-<!--	<script src="js/indexmiau.js"></script>
+	<script src="js/indexmiau.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
-	DIV PRINCIPAL
 	<div class="divPrincipal">
 		<div class="labuta">
-			<img id="paw" src="poze/paw.png">  F1L06Min.05
-			<img id="paw" src="{{paw}}"/>
+			<a href="/"><img id="paw" src="{{paw}}"/></a>
 		</div>
 		<h1 class="title">Paw Shop</h1>		
 		<div class="contCos">
@@ -25,21 +23,13 @@
 			</div>
 		</div>
 	</div>
-	<AL DOILEA DIV
 	<div class="navBar">
 		<ul class="ul">
- 		 <li><a href="produse.html">PRODUSE</a></li>
-		  <li><a href="pisici.html">PISICI</a></li>
-		  <li><a href="adoption.html">PISICI PENTRU ADOPȚIE</a></li>
+ 		 <li><a routerLink="/products" routerLinkActive="activeLink">PRODUSE</a></li>
+		  <li><a routerLink="/cats" routerLinkActive="activeLink">PISICI</a></li>
+		  <li><a routerLink="/adoption" routerLinkActive="activeLink">PISICI PENTRU ADOPȚIE</a></li>
 		</ul>
-	</div>-->
-	<h1>Test for CatsShop</h1>
-	<app-cats-list></app-cats-list>
-	<catslist-detail></catslist-detail>
-	<app-cats></app-cats>
-	<app-adoption></app-adoption>
-	<app-products></app-products>
-	
+	</div>
 	
 
 <router-outlet></router-outlet>

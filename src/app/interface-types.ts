@@ -1,12 +1,3 @@
-export interface InterfaceCatsList {
-    id: number,
-    name: string,
-    price: number,
-    image: {
-        url: string
-    }
-}
-
 export interface InterfaceAdoptions {
     id: number,
     name: string,
@@ -14,7 +5,8 @@ export interface InterfaceAdoptions {
     price: number,
     image: {
         url: string
-    }
+    },
+    currency: string
 }
 
 export interface InterfaceProducts {
@@ -24,5 +16,6 @@ export interface InterfaceProducts {
     price: number,
     image: {
         url: string
-    }
+    },
+    currency: string
 }

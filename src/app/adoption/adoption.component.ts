@@ -3,12 +3,8 @@ import {AdoptionService} from '../adoption.service';
 
 @Component({
   selector: 'app-adoption',
-  template:`
-  <ul *ngFor="let feline of adoptions">
-  <li>{{feline.name}} - {{feline.description}}</li>
-  </ul>
-  `,
-  styles:[]
+  templateUrl: './adoption.component.html',
+  styleUrls: ['./adoption.component.css']
 })
 export class AdoptionComponent implements OnInit {
 
