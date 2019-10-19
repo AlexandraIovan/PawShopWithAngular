@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   constructor(private _lgService: LoginService) { }
 
   ngOnInit() {
-    this.connection =  this._lgService.getconnection();
+    this._lgService.getconnection()
+        .subscribe(data =>this.connection = data);
   }
 
 }

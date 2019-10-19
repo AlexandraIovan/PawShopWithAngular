@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductsService {
 
-  private _url:string = "http://pawshop.herokuapp.com/products"
+  private _url:string = "http://pawshop.herokuapp.com/products";
   constructor(private http:HttpClient) { }
 
   getstuffForCats(): Observable<InterfaceProducts[]>{

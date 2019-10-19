@@ -5,6 +5,7 @@ import { RegisterService } from '../register.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
 
   public registration = [];
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
   constructor(private _registrationService: RegisterService) { }
 
   ngOnInit() {
-    this.registration = this._registrationService.getregistration();
+    this._registrationService.getregistration()
+        .subscribe(data =>this.registration = data);
 
   }
 
