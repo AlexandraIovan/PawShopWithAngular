@@ -5,15 +5,18 @@ import { AppRoutingModule, rountingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 /*import { AdoptionComponent } from './adoption/adoption.component';
 import { ProductsComponent } from './products/products.component';*/
 
 //rountingComponents le tine locul.se adauga new components doar in ap-routing.module.ts
 
-import {AdoptionService} from './adoption.service';
-import {ProductsService} from './products.service';
-import {CatsService} from './cats.service';
+import { AdoptionService } from './adoption.service';
+import { ProductsService } from './products.service';
+import { CatsService } from './cats.service';
+import { LoginService } from './login.service';
+import { RegisterService } from './register.service';
+import { ForgottenPasswordService } from './forgotten-password.service';
 
 
 
@@ -29,7 +32,7 @@ import {CatsService} from './cats.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CatsService, AdoptionService, ProductsService],
+  providers: [CatsService, AdoptionService, ProductsService, LoginService, RegisterService, ForgottenPasswordService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
