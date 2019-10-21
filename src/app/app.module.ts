@@ -17,8 +17,6 @@ import { CatsService } from './cats.service';
 import { LoginService } from './login.service';
 import { RegisterService } from './register.service';
 import { ForgottenPasswordService } from './forgotten-password.service';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductsDetailsComponent } from './products-details/products-details.component';
 
 
 
@@ -26,8 +24,6 @@ import { ProductsDetailsComponent } from './products-details/products-details.co
   declarations: [
     AppComponent,
     rountingComponents,
-    ProductDetailComponent,
-    ProductsDetailsComponent,
    // AdoptionComponent,
    // ProductsComponent
   ],
