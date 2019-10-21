@@ -40,3 +40,5 @@ export interface InterfaceRegister {
 export interface InterfaceFPassword {
     habarnuam: string
 }
+
+ 
