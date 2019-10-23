@@ -22,9 +22,12 @@ export interface InterfaceProducts {
 }
 
 export interface InterfaceLogin {
-    id: number,
-    username: string,
-    password: string
+    kind: string,
+    idToken: string,
+    email: string,
+    refreshToken: string,
+    expiresIn: string,
+    localId: string
 }
 
 export interface InterfaceRegister {

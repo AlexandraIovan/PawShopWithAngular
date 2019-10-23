@@ -16,4 +16,16 @@ export class LoginService {
   getconnection():Observable<InterfaceLogin[]>{
     return this.http.get<InterfaceLogin[]>("");
   }
+
+  signup(email: string, password: string){
+    return this.http.post<InterfaceLogin>('AICI VINE LINKUL DE PE HEROKU',
+      {
+        email: email,
+        password: password,
+        returnSecureToken: true
+      }
+    );
+  }
+
+
 }
