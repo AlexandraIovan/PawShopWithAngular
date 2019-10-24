@@ -17,7 +17,7 @@ import { CatsService } from './cats.service';
 import { LoginService } from './login.service';
 import { RegisterService } from './register.service';
 import { ForgottenPasswordService } from './forgotten-password.service';
-
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
 @NgModule({
@@ -26,6 +26,7 @@ import { ForgottenPasswordService } from './forgotten-password.service';
     rountingComponents,
    // AdoptionComponent,
    // ProductsComponent
+   LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,

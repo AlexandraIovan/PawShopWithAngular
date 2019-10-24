@@ -23,7 +23,7 @@ export class LoginService {
         email: email,
         password: password,
         returnSecureToken: true
-      }
+      } 
     );
   }
 
