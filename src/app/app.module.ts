@@ -6,6 +6,7 @@ import { AppRoutingModule, rountingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 /*import { AdoptionComponent } from './adoption/adoption.component';
 import { ProductsComponent } from './products/products.component';*/
 
@@ -15,8 +16,6 @@ import { AdoptionService } from './adoption.service';
 import { ProductsService } from './products.service';
 import { CatsService } from './cats.service';
 import { LoginService } from './login.service';
-import { RegisterService } from './register.service';
-import { ForgottenPasswordService } from './forgotten-password.service';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
@@ -31,9 +30,15 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [CatsService, AdoptionService, ProductsService, LoginService, RegisterService, ForgottenPasswordService],
+  providers: [CatsService, AdoptionService, ProductsService, LoginService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  }
+
+
+

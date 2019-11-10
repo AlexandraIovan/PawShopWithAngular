@@ -7,12 +7,12 @@
 			<a href="/"><img id="paw" src="{{paw}}"/></a>
 		</div>
 		<h1 class="title">Paw Shop</h1>		
-		<div class="contCos">
+		<div *ngIf="isLoggedIn" class="contCos">
 			<div class="dropdown">
-  				<button onclick="myFunction()" class="dropButton">Contul Meu</button>
-  				<div id="myDropdown" class="dropdown-content">
-    				<a routerLink="/login" routerLinkActive="activeLink">Authenticate</a>
-  				</div><br>
+  				<button (click)="switchDropdown($event)" class="dropButton">Contul Meu</button>
+  				<div *ngIf="isDropdownOpen" id="myDropdown" class="dropdown-content">
+					<a (click)="logout($event)" >Logout</a>
+				  </div><br>
 			</div>
 			<div class="dropdown2">
   				<button onclick="myFunction2()" class="dropButton2">Cos</button>
@@ -33,5 +33,5 @@
 
 	
 <router-outlet></router-outlet>
-<!--Routed views go here-->
+<!--asta schimba paginile-->
 

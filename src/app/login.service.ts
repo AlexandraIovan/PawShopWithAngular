@@ -9,7 +9,7 @@ import { Observable} from 'rxjs';
 })
 export class LoginService {
 
-  private _url:string = "";
+  private _url:string = "http://pawshop.herokuapp.com/auth/local";
 
   constructor(private http:HttpClient) { }
 
@@ -17,10 +17,10 @@ export class LoginService {
     return this.http.get<InterfaceLogin[]>("");
   }
 
-  signup(email: string, password: string){
-    return this.http.post<InterfaceLogin>('AICI VINE LINKUL DE PE HEROKU',
+  login(email: string, password: string){
+    return this.http.post<InterfaceLogin>(this._url,
       {
-        email: email,
+        identifier: email,
         password: password,
         returnSecureToken: true
       } 

@@ -30,18 +30,6 @@ export interface InterfaceLogin {
     localId: string
 }
 
-export interface InterfaceRegister {
-    id:number,
-    name: string,
-    username: string,
-    password: string,
-    email: string,
-    birthday: number,
-    phone: number
-}
 
-export interface InterfaceFPassword {
-    habarnuam: string
-}
 
  

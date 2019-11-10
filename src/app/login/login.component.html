@@ -1,17 +1,16 @@
 <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
         <form #identificationForm="ngForm" (ngSubmit)="onSubmit(identificationForm)">
-            <!--#identificationForm="ngForm" gives acces to angular form object. de revazut tutorialul de forms in angular.-->
             <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email">Username</label>
                 <input 
-                    type="email" 
+                    type="text" 
                     id="email" 
                     class="form-control" 
                     ngModel 
                     name="email" 
                     required 
-                    email
+                    
                 />
             </div>
             <div class="form-group">
@@ -28,9 +27,8 @@
                 <!-- minlength="8" => obligatoriu min de char sa fie 8-->
             </div>
             <div>
-                <button class="btn btn-primary" type="submit" [disabled]="!identificationForm.valid">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button> |
+                <button class="btn btn-primary" type="submit" [disabled]="!identificationForm.valid">Login</button>
                 <!-- [disabled]="!identificationForm.valid - butonul e inactiv pana nu compl. toate datele de login + adrs valida de email.-->
-                <button class="btn btn-primary" (click)="onSwitchMode()" type="button">Switch to {{ isLoginMode ? 'Sign Up' : 'Login'}}</button>
             </div>
         </form>
     </div>
