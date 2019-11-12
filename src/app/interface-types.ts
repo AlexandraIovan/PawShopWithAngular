@@ -1,4 +1,4 @@
-//trb sa pun interface si la cats?
+//trb sa pun interface si la cats
 export interface InterfaceAdoptions {
     id: number,
     name: string,

@@ -5,9 +5,7 @@ import { HomeComponent} from './home/home.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
-// import { RegisterComponent } from './register/register.component';
-// import { ForgottenPasswordComponent } from './forgotten-password/forgotten-password.component';
-
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -18,6 +16,8 @@ const routes: Routes = [
     { path: 'adoption', component: AdoptionComponent },
     { path: 'products', component: ProductsComponent},
     { path: 'login', component: LoginComponent},
+    { path: 'cart', component: ShoppingCartComponent},
+
 
 
 ];
@@ -27,4 +27,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const rountingComponents = [CatsComponent, HomeComponent, AdoptionComponent, ProductsComponent, LoginComponent];
+export const rountingComponents = [CatsComponent, HomeComponent, AdoptionComponent, ProductsComponent, LoginComponent,ShoppingCartComponent];
