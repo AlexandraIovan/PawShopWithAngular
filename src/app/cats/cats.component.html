@@ -1,180 +1,23 @@
       <section class="shop">
          <div class="shopProducts">
             <div class="products">
-               <div class="item">
+               <div class="item" *ngFor="let catTypes of cats">
                   <article class="product">
-                     <h1 class="name">Bengaleza</h1>
-                     <img src="../assets/poze/bengaleza1.jpg" alt="cover" class="productImage">
-                     <p>Origine: Statele Unite ale Americii
-                        Clasă superioară: Pisică de casă
-                        Clasificare: Hibrid
+                     <h1 class="name">{{catTypes.name}}</h1>
+                     <img src={{catTypes.image.url}} alt="cover" class="productImage">
+                     <p>
+                           {{catTypes.description}}
                      </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 2.500 RON</span></p>
+                     <p class="productPrice">Preț: <span class="productPrice2"> {{catTypes.price}} {{catTypes.currency}}</span></p>
                      <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Persană</h1>
-                     <img src="../assets/poze/persana.jpg" alt="cover" class="productImage">
-                     <p>Durată medie de viață: 10 – 17 ani (În captivitate)
-                        <br>Origine: Iran
-                        Clasă: Mammalia
-                        <br>Clasă superioară: Pisică de casă
-                        Specie: silvestris
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 3.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Scottish Fold</h1>
-                     <img src="../assets/poze/scottish.jpg" alt="cover" class="productImage">
-                     <p>Origine: Scoţia
-                        <br>Clasă superioară: Pisică de casă
-                        <br>Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 4.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Maine Coon</h1>
-                     <img src="../assets/poze/coon.jpg" alt="cover" class="productImage">
-                     <p>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                        Greutate: Mascul: 5,9 – 8,2 kg (Adult), Femelă: 3,6 – 5,4 kg (Adult)
-                        Origine: Maine, Statele Unite ale Americii
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 3.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Albastru de Rusia</h1>
-                     <img src="../assets/poze/albastru2.jpg" alt="cover" class="productImage">
-                     <p>Origine: Arhangelsk
-                        <br>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 3.500 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Siameză</h1>
-                     <img src="../assets/poze/Siameza2.jpg" alt="cover" class="productImage">
-                     <p>Origine: Thailanda
-                        <br>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 1.700 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Ragdoll</h1>
-                     <img src="../assets/poze/ragdoll.jpg" alt="cover" class="productImage">
-                     <p>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                        Origine: Statele Unite ale Americii, California
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 4.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Sfinx</h1>
-                     <img src="../assets/poze/sfinx.png" alt="cover" class="productImage">
-                     <p>Origine: Toronto
-                        <br>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 6.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Mau egiptean</h1>
-                     <img src="../assets/poze/maueg.jpg" alt="cover" class="productImage">
-                     <p>Origine: Egipt
-                        <br>Clasă superioară: Pisică de casă
-                        <br>Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 7.000 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Chartreux</h1>
-                     <img src="../assets/poze/chart.jpg" alt="cover" class="productImage">
-                     <p>Origine: Franţa
-                        <br>Clasă superioară: Pisică de casă
-                        <br>Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 2.500 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Korat</h1>
-                     <img src="../assets/poze/korat.jpg" alt="cover" class="productImage">
-                     <p>Origine: Thailanda
-                        <br>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 1.500 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
-                     </p>
-                  </article>
-               </div>
-               <div class="item">
-                  <article class="product">
-                     <h1 class="name">Norvegiană de pădure</h1>
-                     <img src="../assets/poze/norvegiana.jpg" alt="cover" class="productImage">
-                     <p>Origine: Norvegia
-                        <br>Clasă superioară: Pisică de casă
-                        Clasificare: Rasă domestică
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> 2.800 RON</span></p>
-                     <p class="productTitle">
-                        <a class="addProduct" href="#" title="Add the product">Adaugă</a>
+                           <button class="addProduct" (click)="addToCart(catTypes)">Adaugă</button> 
                      </p>
                   </article>
                </div>
             </div>
          </div>
       </section>
+
       <aside class="cart js-cart">
          <div class="cart__header">
             <h1 class="cart__title">Shopping cart</h1>
