@@ -31,6 +31,20 @@ export class ShoppingCartService {
       //localStorage.setItem asta salveaza lista.; JSON.stringify(productsList) imi transforma lista mea din array in string
       localStorage.setItem("pawshoppingcart", JSON.stringify(productsList));
     }
+  }
 
+  removeFromCart(item){
+    const cartStorage = localStorage.getItem("pawshoppingcart");
+    if (cartStorage){
+      // productsArray e o variabila care o sa contina arrayul rezultat din JSON.parse(de variabila) imi da un array
+      const productsArray = JSON.parse(cartStorage);
+      const productIndex = (productsArray.findIndex(function(element){
+        return element.id === item.id;
+      }));
+      if(productIndex !== -1){
+        productsArray.splice(productIndex,1);
+        localStorage.setItem("pawshoppingcart", JSON.stringify(productsArray));
+      }
+    }
   }
 }

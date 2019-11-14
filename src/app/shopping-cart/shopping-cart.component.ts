@@ -12,27 +12,36 @@ export class ShoppingCartComponent implements OnInit {
  public sum = {}
 
   constructor(private _shoppingCartService:ShoppingCartService) {}
-  //trbuie sa fac cats service ca sa il pun mai sus
 
-  ngOnInit() {
+  chestiiRepetitive(){
+    //chestiiRepetitive e o functie care contine un bloc de elemente care se repeta asa ca le-am pus in fucking chestii re=pe=ti=ti=ve!
     // fac o lista noua. pun ce am in local storage in lista cartProducts(e variabila la nivel de clasa, adica o scriu fara var/const in fata, numai public sau private)
     //daca folosesc variabila asta inafara clasei, conform ES6 o pun cu this.numele variabilei
 
     //aici aduc lista ca sa o afisez
     const cartProducts = localStorage.getItem("pawshoppingcart");
     if (cartProducts){
-      // cartProducts e o variabila care o sa contina arrayul rezultat din JSON.parse(de variabila) imi da un array
+    // cartProducts e o variabila care o sa contina arrayul rezultat din JSON.parse(de variabila) imi da un array
      this.cartProducts = JSON.parse(cartProducts);
+    }
   }
+
+  ngOnInit() {
+    this.chestiiRepetitive();
 }
 
 
-changeQuantity(value, item) {
-  //parseInt imi trasnforma un string in numar
-  const quantity = parseInt(value);
-  this.sum[item.id] = quantity * item.price;
-  console.log (this.sum);
-}
+  changeQuantity(value, item) {
+    //parseInt imi trasnforma un string in numar
+    const quantity = parseInt(value);
+    this.sum[item.id] = quantity * item.price;
+    console.log (this.sum);
+  }
+  
+  removeFromCart(item){
+    this._shoppingCartService.removeFromCart(item);
+    this.chestiiRepetitive();
+  }
 }
 
 
