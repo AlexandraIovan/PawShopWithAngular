@@ -10,6 +10,12 @@ export class ShoppingCartComponent implements OnInit {
  public cartProducts = [];
  //asta e un obiect gol
  public sum = {}
+ public subtotal = null
+ public currency = ''
+ public total = null
+ public shipping = 25
+ public isCheckedout = false
+
 
   constructor(private _shoppingCartService:ShoppingCartService) {}
 
@@ -23,6 +29,16 @@ export class ShoppingCartComponent implements OnInit {
     if (cartProducts){
     // cartProducts e o variabila care o sa contina arrayul rezultat din JSON.parse(de variabila) imi da un array
      this.cartProducts = JSON.parse(cartProducts);
+     if (this.cartProducts[0]){
+       this.currency = this.cartProducts[0].currency;
+     }
+     //din cauza ca am pus function() , nu imi procesa bine ptr ca trimitea datele pe window. this era window DAR
+     // DACA pun ()=>{} e din ES6 care pastreaza automat this-ul sa fie acelasi obiect
+     this.cartProducts.forEach((item) => {
+       this.sum[item.id] = parseInt(item.price);
+     })
+     this.calcSubtotal();
+     this.calcTotal();
     }
   }
 
@@ -35,12 +51,31 @@ export class ShoppingCartComponent implements OnInit {
     //parseInt imi trasnforma un string in numar
     const quantity = parseInt(value);
     this.sum[item.id] = quantity * item.price;
-    console.log (this.sum);
+    this.calcSubtotal();
+    this.calcTotal();
   }
   
   removeFromCart(item){
     this._shoppingCartService.removeFromCart(item);
     this.chestiiRepetitive();
+  }
+
+  calcSubtotal(){
+    const productsValue = Object.values(this.sum);
+    console.log('productsValue',productsValue);
+    const subtotal = productsValue.reduce((sum:number,currentValue:number) =>{
+      return sum + currentValue;
+    },0);
+    this.subtotal = subtotal;
+  }
+
+
+  calcTotal(){
+    this.total = this.subtotal + this.shipping;
+  }
+
+  cartCheckout(){
+    this.isCheckedout = true;
   }
 }
 

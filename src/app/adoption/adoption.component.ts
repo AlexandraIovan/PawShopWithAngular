@@ -19,6 +19,7 @@ export class AdoptionComponent implements OnInit {
   }
   //pot pune acelasi nume de functie ptr ca actioneaza numai pe products
   addToCart(item){
+    item.isAdoption = true;
     //_shoppingCartService ii din ShoppingCartService si contine functia addToCart care NU e aceeasi cu functia addToCart de aici
     this._shoppingCartService.addToCart(item)
     console.log(item);

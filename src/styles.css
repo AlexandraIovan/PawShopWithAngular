@@ -128,9 +128,33 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
 }
+li a:hover {
+  color: white;
+  text-decoration: none;
+}
 li {
     border-right:1px solid #bbb;
     width: 33.33%;
+}
+
+.addProduct {
+  background-color: #333;
+  color: white;
+  font-size: 0.833rem;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.125em;
+  -moz-letter-spacing: 0.125em;
+  -ms-letter-spacing: 0.125em;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  margin: 1.25em auto 1em;
+  padding: 1.33em 1.25em 1.25em;
+  max-width: 280px;
+  width: 70%;
+}
+
+.addProduct:hover{
+  background:black;
 }
 
 
@@ -142,10 +166,8 @@ li {
 }
 
 .activeLink{
-    background: red; 
+    background: #555; 
 }
-
-
   
 .shop {
     position: relative;
@@ -232,7 +254,7 @@ li {
   
   .button {
     display: inline-block;
-    background: #39C;
+    background: #fff;
     padding: 5px 10px;
     border-radius: 3px;
     font-weight: bold;
@@ -243,7 +265,7 @@ li {
   
   .button--light {
     background: #FFF;
-    color: #F00;
+    color: #555;
   }
   
   .cart {
@@ -318,7 +340,7 @@ li {
   }
 
   .cart__products article p a {
-    color: #ff0000;
+    color: #555;
   }
   
   .cart__product {
