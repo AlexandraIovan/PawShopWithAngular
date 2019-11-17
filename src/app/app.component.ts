@@ -11,6 +11,7 @@ export class AppComponent {
   paw = 'assets/poze/paw.png';
   isLoggedIn = false;
   isDropdownOpen = false;
+  username = '';
   constructor(private router: Router) {
 
     /**
@@ -25,8 +26,9 @@ export class AppComponent {
       const userDataString = localStorage.getItem("pawshop");
       console.log (navigation);
       if (userDataString){
+        this.username = JSON.parse(userDataString).user.username;
         this.isLoggedIn = true;
-      } else if (navigation instanceof NavigationEnd && navigation.url!=='/login'){
+      } else if (navigation instanceof NavigationEnd && navigation.url!=='/login' && navigation.url!=='/register' ){
         router.navigate(['/login']);
       }
     });

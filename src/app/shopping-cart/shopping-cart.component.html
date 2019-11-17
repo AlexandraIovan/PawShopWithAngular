@@ -1,6 +1,6 @@
 <h1>Shopping Cart</h1>
 
-<div class="shopping-cart">
+<div *ngIf="!isCheckedout" class="shopping-cart">
 
   <div class="column-labels">
     <label class="product-image">Image</label>
@@ -19,7 +19,6 @@
     </div>
     <div class="product-details">
       <div class="product-title">{{item.name}}</div>
-      <p class="product-description">{{item.description}}</p>
     </div>
     <div class="product-price">{{item.price}} {{item.currency}}</div>
 
@@ -37,7 +36,6 @@
     <div class="product-line-price">{{sum[item.id]}} {{item.currency}}</div>
   </div>
 
-  
 
   <div class="totals">
     <div class="totals-item">
@@ -55,5 +53,9 @@
   </div>
       
       <button class="checkout" (click)="cartCheckout()">Checkout</button>
+
+</div>
+<div *ngIf="isCheckedout">
+Comanda ta a fost preluata cu succes!
 
 </div>

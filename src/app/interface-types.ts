@@ -40,6 +40,22 @@ export interface InterfaceLogin {
     localId: string
 }
 
+export interface InterfaceRegister {
+    user: {
+        blocked: boolean,
+        confirmed: boolean,
+        email: string,
+        id: string,
+        provider: string,
+        role: string,
+        username: string,
+        __v: number,
+        _id: string
+    },
+    jwt: string
+}
+
+
 
 
  

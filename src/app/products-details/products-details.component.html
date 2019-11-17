@@ -1,1 +1,14 @@
-<p>products-details works!</p>
+	<div class="container">
+		<div class = "row">
+			<div class="col-md-6">
+                <img src={{productDetails.image.url}} />
+             </div>
+             <div class="col-md-6">
+                <h2>{{productDetails.name}}</h2>
+                <p class="price">{{productDetails.price}} {{productDetails.currency}}</p>
+                <p><b>Descriere:</b> {{productDetails.description}}</p>
+                <button type="button" (click)="addToCart()" class="addProduct">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+		

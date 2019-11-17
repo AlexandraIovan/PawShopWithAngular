@@ -5,7 +5,9 @@ import { HomeComponent} from './home/home.component';
 import { AdoptionComponent } from './adoption/adoption.component';
 import { ProductsComponent } from './products/products.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ProductsDetailsComponent } from './products-details/products-details.component';
 
 
 
@@ -15,11 +17,10 @@ const routes: Routes = [
     { path: 'cats', component: CatsComponent },
     { path: 'adoption', component: AdoptionComponent },
     { path: 'products', component: ProductsComponent},
+    { path: 'details', component: ProductsDetailsComponent},
     { path: 'login', component: LoginComponent},
+    { path: 'register', component: RegisterComponent},
     { path: 'cart', component: ShoppingCartComponent},
-
-
-
 ];
 
 @NgModule({
@@ -27,4 +28,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const rountingComponents = [CatsComponent, HomeComponent, AdoptionComponent, ProductsComponent, LoginComponent,ShoppingCartComponent];
+export const rountingComponents = [CatsComponent, HomeComponent, AdoptionComponent, ProductsComponent, LoginComponent,ShoppingCartComponent, ProductsDetailsComponent, RegisterComponent];

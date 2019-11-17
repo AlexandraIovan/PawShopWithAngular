@@ -17,11 +17,13 @@ import { ProductsService } from './products.service';
 import { CatsService } from './cats.service';
 import { LoginService } from './login.service';
 import { ShoppingCartService } from './shopping-cart.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     rountingComponents,
+    RegisterComponent,
    // AdoptionComponent,
    // ProductsComponent
   //  LoadingSpinnerComponent,

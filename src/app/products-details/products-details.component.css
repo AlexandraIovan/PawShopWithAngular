@@ -1,0 +1,24 @@
+.container {
+
+	margin-top: 100px;
+}
+
+.col-md-7 h2 
+{
+	color: #555;
+}
+
+.price {
+	color: #000000;
+	font-size: 26px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+.cart {
+	background: #999999;
+	color:#ffffff;	
+}
+
+.cart:hover {
+    background-color: #000000;
+  }

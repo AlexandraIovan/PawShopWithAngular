@@ -1,7 +1,4 @@
 
-	<script src="js/indexmiau.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
 	<div class="divPrincipal">
 		<div class="labuta">
 			<a routerLink="/"><img id="paw" src="{{paw}}"/></a>
@@ -9,7 +6,7 @@
 		<h1 class="title">Paw Shop</h1>		
 		<div *ngIf="isLoggedIn" class="contCos">
 			<div class="dropdown">
-  				<button (click)="switchDropdown($event)" class="dropButton">Contul Meu</button>
+  				<button (click)="switchDropdown($event)" class="dropButton">{{username}}</button>
   				<div *ngIf="isDropdownOpen" id="myDropdown" class="dropdown-content">
 					<a (click)="logout($event)" >Logout</a>
 				  </div><br>
@@ -23,11 +20,15 @@
 		</div>
 	</div>
 	<div class="navBar">
-		<ul class="ul">
+		<ul class="ul" *ngIf="isLoggedIn">
  		 <li><a routerLink="/products" routerLinkActive="activeLink">PRODUSE</a></li>
 		  <li><a routerLink="/cats" routerLinkActive="activeLink">PISICI</a></li>
 		  <li><a routerLink="/adoption" routerLinkActive="activeLink">PISICI PENTRU ADOPȚIE</a></li>
 		</ul>
+		<ul class="ul ul-two-columns" *ngIf="!isLoggedIn">
+			<li><a routerLink="/login" routerLinkActive="activeLink">Login</a></li>
+			<li><a routerLink="/register" routerLinkActive="activeLink">Register</a></li>
+		  </ul>
 	</div>
 	
 

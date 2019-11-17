@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService} from '../products.service';
 import { ShoppingCartService } from '../shopping-cart.service';
+import { ProductsDetailsService } from '../products-details.service';
+import { Router} from '@angular/router';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -11,7 +14,7 @@ export class ProductsComponent implements OnInit {
   public stuffForCats = [];
    
 
-  constructor(private _catsStuffService:ProductsService, private _shoppingCartService:ShoppingCartService) { }
+  constructor(private _catsStuffService:ProductsService, private _shoppingCartService:ShoppingCartService, private _productsDetailsService:ProductsDetailsService, private router: Router) { }
 
   ngOnInit() { 
     this._catsStuffService.getstuffForCats()
@@ -24,6 +27,12 @@ export class ProductsComponent implements OnInit {
     this._shoppingCartService.addToCart(item)
     console.log(item);
 
+  }
+
+  showDetails(product) {
+    console.log("SET PRODUCT ", product)
+    this._productsDetailsService.setProductDetail(product)
+    this.router.navigate(['/details']);
   }
 
 }

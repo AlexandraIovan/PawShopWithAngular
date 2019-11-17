@@ -75,6 +75,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   cartCheckout(){
+    // se salveaza comanda in backend
     this.isCheckedout = true;
   }
 }

@@ -1,53 +1,17 @@
-      <section class="shop">
-         <div class="shopProducts">
-            <div class="products">
-               <div class="item" *ngFor="let things of stuffForCats">
-                  <article class="product">
-                     <h1 class="name">{{things.name}}</h1>
-                     <img src={{things.image.url}} alt="cover" class="productImage">
-                     <p>
-                       {{things.description}}
-                     </p>
-                     <p class="productPrice">Preț: <span class="productPrice2"> {{things.price}} {{things.currency}}</span></p>
-                     <p class="productTitle">
-                        <button class="addProduct" (click)="addToCart(things)">Adaugă</button> 
-                     </p>
-                  </article>
-               </div>
-            </div>
+<section class="shop">
+   <div class="shopProducts">
+      <div class="products">
+         <div class="item" *ngFor="let things of stuffForCats">
+            <article class="product">
+               <h1 class="name">{{things.name}}</h1>
+               <img (click)="showDetails(things)" src={{things.image.url}} alt="cover" class="productImage">
+               
+               <p class="productPrice">Preț: <span class="productPrice2"> {{things.price}} {{things.currency}}</span></p>
+               <p class="productTitle">
+                  <button class="addProduct" (click)="addToCart(things)">Adaugă</button> 
+               </p>
+            </article>
          </div>
-      </section>
-      
-      <aside class="cart js-cart">
-         <div class="cart__header">
-            <h1 class="cart__title">Shopping cart</h1>
-            <p class="cart__text">
-               <a class="button button--light js-toggle-cart" href="#" title="Close cart">
-               Close cart
-               </a>
-            </p>
-         </div>
-         <div class="cart__products js-cart-products">
-            <p class="cart__empty js-cart-empty">
-               Add a product to your cart
-            </p>
-            <div class="cart__product js-cart-product-template">
-               <article class="js-cart-product">
-                  <h1>Product title</h1>
-                  <p>
-                     <a class="js-remove-product" href="#" title="Delete product">
-                     Delete product
-                     </a>
-                  </p>
-               </article>
-            </div>
-         </div>
-         <div class="cart__footer">
-            <p class="cart__text">
-               <a class="button" href="#" title="Buy products">
-               Buy products
-               </a>
-            </p>
-         </div>
-      </aside>
-      <div class="lightbox js-lightbox js-toggle-cart"></div> 
+      </div>
+   </div>
+</section>
